@@ -127,9 +127,17 @@
     pointer-events: none;
   }
   .hero-inner {
-    max-width: 1280px; margin: 0 auto; width: 100%;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
-    position: relative; z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; /* 👈 ทำให้ซ้ายเด่นกว่า */
+    gap: 80px;
+  
+    align-items: center;
+    position: relative;
+    z-index: 2;
   }
 
   /* HERO LEFT */
@@ -151,10 +159,14 @@
 
   h1 {
     font-family: 'Prompt', sans-serif;
-    font-size: clamp(36px, 4.5vw, 60px);
-    font-weight: 900; line-height: 1.1;
-    color: #fff; margin-bottom: 24px;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 28px;
     letter-spacing: -2px;
+  
+    text-shadow: 0 8px 40px rgba(123,47,190,0.25); /* 👈 เพิ่ม glow */
   }
   h1 .highlight-purple { color: var(--purple-light); }
   h1 .highlight-gold {
@@ -173,6 +185,7 @@
     font-size: 16px; font-weight: 700; cursor: pointer;
     transition: all .2s; text-decoration: none; display: inline-block;
     box-shadow: 0 8px 32px var(--purple-glow);
+    padding: 18px 42px;
   }
   .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 14px 40px var(--purple-glow); }
   .btn-play {
